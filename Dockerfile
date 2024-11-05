@@ -12,7 +12,7 @@ RUN yarn build
 
 FROM node:21.7.3-alpine AS runner
 
-ENV NODE_ENV production
+ENV NODE_ENV=production
 
 WORKDIR /app
 
