@@ -1,4 +1,4 @@
-FROM node:21.7.3-alpine AS fe_builder
+FROM node:21.7.3 AS fe_builder
 
 WORKDIR /app
 
@@ -10,7 +10,7 @@ COPY . .
 
 RUN yarn build
 
-FROM node:21.7.3-alpine AS runner
+FROM node:21.7.3 AS runner
 
 ENV NODE_ENV=production
 
@@ -21,7 +21,7 @@ RUN yarn install --frozen-lockfile --production
 
 COPY --from=fe_builder /app/.next ./.next
 COPY --from=fe_builder /app/public ./public
-COPY --from=fe_builder /app/next.config.js ./next.config.js
+COPY --from=fe_builder /app/next.config.ts ./next.config.ts
 
 EXPOSE 3000
 
