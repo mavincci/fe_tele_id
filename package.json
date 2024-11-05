@@ -2,11 +2,15 @@
   "name": "fe_tele_id_main",
   "version": "0.1.0",
   "private": true,
+  "author": "Michael Abebe notthismichael@gmail.com",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "format": "prettier --write .",
+    "lint:format": "yarn lint:fix && yarn format"
   },
   "dependencies": {
     "react": "19.0.0-rc-02c0e824-20241028",
@@ -21,6 +25,9 @@
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "eslint": "^8",
-    "eslint-config-next": "15.0.2"
+    "eslint-config-next": "15.0.2",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3"
   }
 }
