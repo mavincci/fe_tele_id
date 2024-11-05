@@ -1,0 +1,62 @@
+# EditorConfig is awesome: https://editorconfig.org
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+# Set default charset to utf-8
+charset = utf-8
+
+# 2 space indentation for all files
+indent_style = space
+indent_size = 2
+tab_width = 2
+
+# Trim trailing whitespace on save
+trim_trailing_whitespace = true
+
+# Matches multiple file extensions
+[*.{js,ts,jsx,tsx,json}]
+indent_style = space
+indent_size = 2
+tab_width = 2
+
+# For TypeScript files
+[*.ts]
+indent_style = space
+indent_size = 2
+tab_width = 2
+
+# For Next.js pages
+[pages/**/*.{js,ts,jsx,tsx}]
+indent_style = space
+indent_size = 2
+tab_width = 2
+
+# For Electron main process files
+[main/**/*.{js,ts}]
+indent_style = space
+indent_size = 2
+tab_width = 2
+
+# JSON specific rules
+[*.json]
+indent_style = space
+indent_size = 2
+
+# Markdown specific rules
+[*.md]
+trim_trailing_whitespace = false
+indent_style = space
+indent_size = 2
+
+# Ignore minified files
+[*.min.js]
+indent_style = space
+indent_size = 2
+
+# Ignore build files
+[build/**]
+insert_final_newline = false
